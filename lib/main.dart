@@ -33,7 +33,7 @@ class HomeScreen extends StatelessWidget{
                 ),
                 child: CircleAvatar(
                   radius: 120,
-                  backgroundImage: NetworkImage("https://pbs.twimg.com/profile_images/1194449088214753283/enmPpIWA_400x400.jpg")
+                  backgroundImage: AssetImage("assets/images/prof.jpg")
                 )
               ),
               SizedBox(
