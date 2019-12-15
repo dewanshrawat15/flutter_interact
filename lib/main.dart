@@ -1,5 +1,7 @@
 import "package:flutter/material.dart";
 
+import 'package:google_fonts/google_fonts.dart';
+
 void main(){
   runApp(
     App()
@@ -11,6 +13,11 @@ class App extends StatelessWidget{
   Widget build(BuildContext context){
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primaryColor: Colors.black,
+        brightness: Brightness.light,
+        accentColor: Colors.black
+      ),
       home: HomeScreen()
     );
   }
@@ -41,8 +48,10 @@ class HomeScreen extends StatelessWidget{
               ),
               Text(
                 "Dewansh Rawat",
-                style: TextStyle(
-                  fontSize: 32
+                style: GoogleFonts.raleway(
+                  textStyle: TextStyle(
+                    fontSize: 32
+                  )
                 )
               ),
               SizedBox(
@@ -50,15 +59,17 @@ class HomeScreen extends StatelessWidget{
               ),
               Text(
                 "The fire in my heart it'll never die",
-                style: TextStyle(
-                  fontSize: 16
+                style: GoogleFonts.titilliumWeb(
+                  textStyle: TextStyle(
+                    fontSize: 20
+                  )
                 )
               ),
               SizedBox(
                 height: 32
               ),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 84),
+                padding: EdgeInsets.symmetric(horizontal: 20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
@@ -113,7 +124,11 @@ class HomeScreen extends StatelessWidget{
             ]
           )
         )
-      )
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){},
+        child: Icon(Icons.favorite_border),
+      ),
     );
   }
 }
